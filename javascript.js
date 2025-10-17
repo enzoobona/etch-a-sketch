@@ -30,6 +30,11 @@ function replaceGrid(){
     }
 }
 
+function opacityUp(){
+    const divs = document.querySelectorAll(".container div")
+    divs.forEach(function(d){d.style.opacity = parseFloat(d.style.opacity) + 0.1});
+}
+
 function createGrid(squareAmountSide){
     totalsquares = squareAmountSide*squareAmountSide;
     
@@ -37,8 +42,10 @@ function createGrid(squareAmountSide){
         const div = document.createElement("div");
         div.style.width = containerWidth/squareAmountSide + "px";
         div.style.height = containerHeight/squareAmountSide + "px";
-        
+        div.style.opacity = 0;
+
         div.addEventListener("mouseenter", (d) => {d.target.style.backgroundColor = "red"})
+        div.addEventListener("mouseenter", opacityUp)
         div.addEventListener("mouseleave", (d) => {d.target.style.backgroundColor = ""})
         container.appendChild(div)
     }
