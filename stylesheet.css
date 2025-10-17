@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttonContainer {
+    margin: 16px 0px;
+}
