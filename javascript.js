@@ -37,7 +37,6 @@ function createGrid(squareAmountSide){
         div.style.height = containerHeight/squareAmountSide + "px";
         
         div.addEventListener("mouseenter", (d) => {d.target.style.backgroundColor = "red"})
-        div.addEventListener("mouseleave", (d) => {d.target.style.backgroundColor = ""})
         container.appendChild(div)
     }
 }
