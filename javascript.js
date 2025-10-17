@@ -16,6 +16,15 @@ btn.addEventListener("click", replaceGrid)
 const btnContainer = document.querySelector(".buttonContainer")
 btnContainer.appendChild(btn)
 
+function getRandomRgbColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  
+  return "rgb(" + r +"," + g + "," + b + ")";
+}
+
+
 function replaceGrid(){
     squarePerSide = parseInt(prompt("Enter the amount of squares per side", "16"))
     console.log(squarePerSide)
@@ -38,7 +47,7 @@ function createGrid(squareAmountSide){
         div.style.width = containerWidth/squareAmountSide + "px";
         div.style.height = containerHeight/squareAmountSide + "px";
         
-        div.addEventListener("mouseenter", (d) => {d.target.style.backgroundColor = "red"})
+        div.addEventListener("mouseenter", (d) => {d.target.style.backgroundColor = getRandomRgbColor()})
         div.addEventListener("mouseleave", (d) => {d.target.style.backgroundColor = ""})
         container.appendChild(div)
     }
