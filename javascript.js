@@ -4,8 +4,6 @@ const containerHeight = containerWidth;
 
 let squarePerSide = 16;
 
-let gridRemoved = false;
-
 container.style.width = containerWidth + "px";
 container.style.height = containerHeight+ "px";
 
